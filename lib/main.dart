@@ -29,7 +29,7 @@ void main() async {
 
   runApp(
     DevicePreview(
-      enabled: kReleaseMode,
+      enabled: !kReleaseMode,
       builder: (context) => EasyLocalization(
         supportedLocales: AppConstants.supportedLocales,
         path: AppConstants.assetsPath,
