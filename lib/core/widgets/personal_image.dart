@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:portfolio_website/core/config/theme/app_colors.dart';
 import 'package:portfolio_website/core/helpers/responsive_helper.dart';
 import 'package:portfolio_website/presentation/viewModel/home_view_model.dart';
 
@@ -13,9 +14,17 @@ class PersonalImageWidget extends StatelessWidget {
     final isDeskTop = context.isDeskTop;
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: isDeskTop ? 520 : 300),
-      child: CachedNetworkImage(
-        imageUrl: profileData!.personalInfo.photo,
-        placeholder: (context, url) => CircularProgressIndicator(),
+      child: Container(
+        color: AppColorsDark.black,
+        child: ClipOval(
+
+          child: CachedNetworkImage(
+            fit: BoxFit.cover,
+
+            imageUrl: profileData!.personalInfo.photo,
+            placeholder: (context, url) => CircularProgressIndicator(),
+          ),
+        ),
       ),
     );
   }
