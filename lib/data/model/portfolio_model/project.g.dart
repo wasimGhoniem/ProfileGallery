@@ -1,0 +1,27 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'project.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Project _$ProjectFromJson(Map<String, dynamic> json) => Project(
+  projectName: json['project_name'] as String?,
+  category: json['category'] as String?,
+  thumbnail: json['thumbnail'] as String?,
+  images: (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  githubLink: json['github_link'] as String?,
+  demoLink: json['demo_link'] as String?,
+  description: json['description'] as String?,
+);
+
+Map<String, dynamic> _$ProjectToJson(Project instance) => <String, dynamic>{
+  'project_name': instance.projectName,
+  'category': instance.category,
+  'thumbnail': instance.thumbnail,
+  'images': instance.images,
+  'github_link': instance.githubLink,
+  'demo_link': instance.demoLink,
+  'description': instance.description,
+};

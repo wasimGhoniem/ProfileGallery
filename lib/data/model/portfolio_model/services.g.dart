@@ -1,0 +1,21 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'services.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Services _$ServicesFromJson(Map<String, dynamic> json) => Services(
+  title: json['title'] as String?,
+  description: json['description'] as String?,
+  servicesList: (json['services_list'] as List<dynamic>?)
+      ?.map((e) => ServicesList.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
+
+Map<String, dynamic> _$ServicesToJson(Services instance) => <String, dynamic>{
+  'title': instance.title,
+  'description': instance.description,
+  'services_list': instance.servicesList,
+};

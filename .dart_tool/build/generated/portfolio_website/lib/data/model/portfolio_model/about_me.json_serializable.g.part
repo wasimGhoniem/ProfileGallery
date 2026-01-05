@@ -1,0 +1,19 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+AboutMe _$AboutMeFromJson(Map<String, dynamic> json) => AboutMe(
+  title: json['title'] as String?,
+  description: json['description'] as String?,
+  skills: (json['skills'] as List<dynamic>?)
+      ?.map((e) => Skill.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  aboutMe: json['about_me'] as String?,
+);
+
+Map<String, dynamic> _$AboutMeToJson(AboutMe instance) => <String, dynamic>{
+  'title': instance.title,
+  'description': instance.description,
+  'about_me': instance.aboutMe,
+  'skills': instance.skills,
+};
